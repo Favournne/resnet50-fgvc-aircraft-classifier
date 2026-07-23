@@ -15,7 +15,16 @@ Results
 - Top misclassifications occur between visually similar variants (e.g., 737-300 vs 737-700, 717 vs 737).
 
 Setup
+ Using Notebook
 
+1. Click the "Open in Colab" button above.
+2. Go to `Runtime` → `Change runtime type` → Select GPU.
+3. Run all cells (`Runtime` → `Run all`).
+
+Important: The training loop takes about 1 hour on a Colab GPU. Once finished, it will save `best_resnet50_finetuned_extra.pth` to the runtime, load it, and launch the Gradio interface for you to test.
+
+> If you want to skip training, you must download the `.pth` model weights from a hosted source (I don't have one right now, but the notebook will generate it for you).
+> 
 ```bash
 git clone https://github.com/your-username/aircraft-classifier.git
 cd aircraft-classifier
